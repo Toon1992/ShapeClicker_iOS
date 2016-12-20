@@ -14,8 +14,8 @@ class Game{
     private var findShape : ColorShape
     
     public func generateViewingShapes(){
-        for index in 0...MAX_SHAPES{
-            viewShapes[index] = generateShape()
+        for _ in 0...MAX_SHAPES{
+            viewShapes.append(generateShape())
         }
     }
     
