@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Start Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShapeClicker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StartGameViewController" customModule="StartGameViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -29,6 +29,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyU-g9-2kX">
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="Start Game"/>
+                                        <connections>
+                                            <segue destination="R11-Zd-eK5" kind="presentation" id="i7q-fd-FLr"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbI-2Q-Czb">
                                         <constraints>
@@ -36,6 +39,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="HighScore"/>
+                                        <connections>
+                                            <segue destination="vVK-He-Bt6" kind="presentation" id="E7T-vD-Xx0"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgJ-Xf-XXd">
                                         <constraints>
@@ -60,6 +66,70 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="l4u-i4-3FV">
+            <objects>
+                <viewController id="R11-Zd-eK5" customClass="GameViewController" customModule="GameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fhi-FE-wB4"/>
+                        <viewControllerLayoutGuide type="bottom" id="eIF-wR-eeM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e8c-HR-nba">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="gu1-T6-svG"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Dug-kF-w8c">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="654-aA-5CJ">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6UW-sg-Wq8">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="11" id="0sd-KC-qYg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gu1-T6-svG" firstAttribute="leading" secondItem="e8c-HR-nba" secondAttribute="leadingMargin" id="5Lh-tr-pUJ"/>
+                            <constraint firstItem="Dug-kF-w8c" firstAttribute="top" secondItem="gu1-T6-svG" secondAttribute="bottom" constant="40" id="6VP-By-xSC"/>
+                            <constraint firstAttribute="trailing" secondItem="Dug-kF-w8c" secondAttribute="trailing" constant="280" id="BAp-D8-UtM"/>
+                            <constraint firstItem="Dug-kF-w8c" firstAttribute="leading" secondItem="e8c-HR-nba" secondAttribute="leadingMargin" id="FZk-wX-040"/>
+                            <constraint firstItem="gu1-T6-svG" firstAttribute="top" secondItem="fhi-FE-wB4" secondAttribute="bottom" constant="20" id="GdR-nD-jlP"/>
+                            <constraint firstItem="gu1-T6-svG" firstAttribute="trailing" secondItem="e8c-HR-nba" secondAttribute="trailingMargin" id="ifk-N1-Bzc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hUh-Ng-8yd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="941.60000000000002" y="137.18140929535232"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Gkg-fy-lzw">
+            <objects>
+                <viewController id="vVK-He-Bt6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sxd-Ll-pJ0"/>
+                        <viewControllerLayoutGuide type="bottom" id="BVB-2C-66Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8cb-Jh-jIY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cOd-3y-859" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="895"/>
         </scene>
     </scenes>
 </document>
