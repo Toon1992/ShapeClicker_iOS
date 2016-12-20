@@ -13,7 +13,23 @@ class Game{
     private var viewShapes : [ColorShape]
     private var findShape : ColorShape
     
+    init(){
+        viewShapes = [ColorShape]()
+        findShape = ColorShape()
+        
+        setNewShapes()
+    }
+    
+    public func setNewShapes(){
+        findShape = generateShape()
+        generateViewingShapes()
+    }
+    
     public func generateViewingShapes(){
+        if !viewShapes.isEmpty{
+            viewShapes = [ColorShape]()
+        }
+        
         for _ in 0...MAX_SHAPES{
             viewShapes.append(generateShape())
         }
@@ -32,13 +48,7 @@ class Game{
         return findShape
     }
     
-    init(){
-        viewShapes = [ColorShape]()
-        findShape = ColorShape()
-        
-        findShape = generateShape()
-        generateViewingShapes()
-    }
+   
     
     
     public func getFindShape() -> ColorShape{
@@ -48,4 +58,18 @@ class Game{
     public func getViewShapes()->[ColorShape]{
         return viewShapes
     }
+    
+    public func checkIfCorrectShape(colorShape: ColorShape) ->Bool{
+        var isCorrect: Bool = false
+        
+        if(findShape == colorShape){
+            isCorrect = true
+        }
+        
+        findShape = generateNewFindShape()
+        setNewShapes()
+        
+        return isCorrect
+    }
+    
 }

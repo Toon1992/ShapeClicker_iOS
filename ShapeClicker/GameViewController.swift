@@ -99,11 +99,23 @@ internal class GameViewController: UIViewController {
     func tap(_ sender: UITapGestureRecognizer){
        let tag = sender.view!.tag
         
-        for shape in viewShapes {
-            if shape == viewShapes[tag]{
-                print("u bent correct")
-            }
+       let _ = game.checkIfCorrectShape(colorShape: viewShapes[tag])
+       reset()
+    }
+    
+    private func removeViewsFromStack(stack: UIStackView ){
+        for view in stack.subviews{
+            view.removeFromSuperview()
         }
+        
+    }
+    
+    private func reset(){
+        removeViewsFromStack(stack: stvUp)
+        removeViewsFromStack(stack: stvDown)
+        viewShapes = game.getViewShapes()
+        setLabel()
+        fillStacks()
     }
     
     

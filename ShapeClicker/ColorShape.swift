@@ -68,7 +68,7 @@ class ColorShape {
 extension ColorShape{
     
     static func ==(lhs: ColorShape, rhs: ColorShape) -> Bool{
-        return lhs.color == rhs.color && lhs.shape == rhs.shape
+        return lhs.shape == rhs.shape
     }
     
 }
