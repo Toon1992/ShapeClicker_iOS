@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C1371E51E096C2C00CBED9D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1371E41E096C2C00CBED9D /* Color.swift */; };
+		8C1371E71E096C4100CBED9D /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1371E61E096C4100CBED9D /* Shape.swift */; };
+		8C1371E91E096D7900CBED9D /* ColorShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1371E81E096D7900CBED9D /* ColorShape.swift */; };
+		8C1371EB1E096F6E00CBED9D /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1371EA1E096F6E00CBED9D /* Game.swift */; };
 		8C251F0B1E093197000594D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C251F0A1E093197000594D3 /* AppDelegate.swift */; };
 		8C251F0D1E093197000594D3 /* StartGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C251F0C1E093197000594D3 /* StartGameViewController.swift */; };
 		8C251F101E093197000594D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C251F0E1E093197000594D3 /* Main.storyboard */; };
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C1371E41E096C2C00CBED9D /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		8C1371E61E096C4100CBED9D /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		8C1371E81E096D7900CBED9D /* ColorShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorShape.swift; sourceTree = "<group>"; };
+		8C1371EA1E096F6E00CBED9D /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		8C251F071E093197000594D3 /* ShapeClicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShapeClicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C251F0A1E093197000594D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C251F0C1E093197000594D3 /* StartGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +84,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C1371E31E096BE500CBED9D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8C1371E41E096C2C00CBED9D /* Color.swift */,
+				8C1371E61E096C4100CBED9D /* Shape.swift */,
+				8C1371E81E096D7900CBED9D /* ColorShape.swift */,
+				8C1371EA1E096F6E00CBED9D /* Game.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		8C251EFE1E093195000594D3 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +118,7 @@
 		8C251F091E093197000594D3 /* ShapeClicker */ = {
 			isa = PBXGroup;
 			children = (
+				8C1371E31E096BE500CBED9D /* Models */,
 				8C251F381E093C77000594D3 /* UIControllers */,
 				8C251F0A1E093197000594D3 /* AppDelegate.swift */,
 				8C251F0E1E093197000594D3 /* Main.storyboard */,
@@ -270,7 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C1371E71E096C4100CBED9D /* Shape.swift in Sources */,
+				8C1371E91E096D7900CBED9D /* ColorShape.swift in Sources */,
+				8C1371EB1E096F6E00CBED9D /* Game.swift in Sources */,
 				8C251F0D1E093197000594D3 /* StartGameViewController.swift in Sources */,
+				8C1371E51E096C2C00CBED9D /* Color.swift in Sources */,
 				8C251F3A1E093EDD000594D3 /* GameViewController.swift in Sources */,
 				8C251F0B1E093197000594D3 /* AppDelegate.swift in Sources */,
 			);
@@ -517,6 +541,7 @@
 				8C251F311E093198000594D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C251F321E093198000594D3 /* Build configuration list for PBXNativeTarget "ShapeClickerTests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +550,7 @@
 				8C251F341E093198000594D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C251F351E093198000594D3 /* Build configuration list for PBXNativeTarget "ShapeClickerUITests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +559,7 @@
 				8C251F371E093198000594D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
