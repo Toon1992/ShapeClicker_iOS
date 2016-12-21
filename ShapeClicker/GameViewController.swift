@@ -12,18 +12,81 @@ internal class GameViewController: UIViewController {
     
     //Properties
     @IBOutlet weak var lblFindElement: UILabel!
-    
+    @IBOutlet weak var progressTimer: UIProgressView!
     @IBOutlet weak var stvUp: UIStackView!
     @IBOutlet weak var stvDown: UIStackView!
+    @IBOutlet weak var lblScore: UILabel!
     
     private var game = Game()
     private var viewShapes = [ColorShape]()
     
+    private var timer = Timer()
+    private var poseDuration = 1000
+    private var indexProgressbar = 999
+    private var maxTimeInterval = 0.007
+    private var timeInterval = 0.0
+    private let maxAddTime = 50
+    private var addTime = 0
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        initialize()
+    }
+    
+    private func initialize(){
+        timeInterval = maxTimeInterval
+        addTime = maxAddTime
+        
         viewShapes = game.getViewShapes()
         setLabel()
         fillStacks()
+        setProgressView()
+    }
+    
+    private func setProgressView(){
+        progressTimer.progress = 100.0
+        cmdGo()
+        
+        progressTimer.transform = progressTimer.transform.scaledBy(x: 1,y: 5)
+        progressTimer.progressTintColor = UIColor.blue
+    }
+    
+    private func cmdGo(){
+        timer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(self.setProgressBar), userInfo: nil, repeats: true)
+    }
+    
+    func setProgressBar(){
+        if indexProgressbar < 0 {
+            showGameOver()
+            timer.invalidate()
+        }
+        
+        if indexProgressbar <= poseDuration/2 && indexProgressbar > 200 {
+            progressTimer.progressTintColor = UIColor.yellow
+        } else if indexProgressbar <= 200 && indexProgressbar > 0{
+            progressTimer.progressTintColor = UIColor.red
+        } else {
+           progressTimer.progressTintColor = UIColor.blue
+        }
+        
+        progressTimer.progress = Float(indexProgressbar) / Float(poseDuration - 1)
+        
+        indexProgressbar -= 1
+    }
+    
+    private func showGameOver(){
+        if let resultController = storyboard!.instantiateViewController(withIdentifier: "GameOver") as? GameOverViewController{
+            present(resultController, animated: true, completion: nil)
+        }
+    }
+    
+    private func addSubtractTime(time: Int){
+        indexProgressbar += time
+    }
+    
+    private func refreshScoreLabel(){
+        lblScore.text = String(game.getScore())
     }
     
     private func setLabel(){
@@ -98,8 +161,18 @@ internal class GameViewController: UIViewController {
     
     func tap(_ sender: UITapGestureRecognizer){
        let tag = sender.view!.tag
+       let shape = viewShapes[tag]
         
-       let _ = game.checkIfCorrectShape(colorShape: viewShapes[tag])
+       let isCorrect = game.checkIfCorrectShape(colorShape: shape)
+    
+        if isCorrect{
+            addSubtractTime(time: addTime * 2)
+            game.addScore(shape: shape)
+            refreshScoreLabel()
+        } else {
+            addSubtractTime(time: addTime * -1)
+        }
+        
        reset()
     }
     

@@ -12,17 +12,21 @@ class ColorShape {
     let color : Color
     let shape : Shape
     var name : String
+    let score : Int
     
     init(color: Color, shape: Shape){
         self.color = color
         self.shape = shape
+        self.score = 100
         self.name = ""
         self.name = makeName()
+        
     }
     
     init(){
         self.color = Color.blue
         self.shape = Shape.cirkel
+        self.score = 100
         self.name = ""
         self.name = makeName()
     }

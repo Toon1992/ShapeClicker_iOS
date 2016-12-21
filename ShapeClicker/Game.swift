@@ -12,6 +12,7 @@ class Game{
     private let MAX_SHAPES = 6
     private var viewShapes : [ColorShape]
     private var findShape : ColorShape
+    private var score = 0
     
     init(){
         viewShapes = [ColorShape]()
@@ -48,9 +49,6 @@ class Game{
         return findShape
     }
     
-   
-    
-    
     public func getFindShape() -> ColorShape{
         return findShape
     }
@@ -70,6 +68,14 @@ class Game{
         setNewShapes()
         
         return isCorrect
+    }
+    
+    public func getScore()->Int{
+        return score
+    }
+    
+    public func addScore(shape: ColorShape){
+        score += shape.score
     }
     
 }
