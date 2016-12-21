@@ -77,6 +77,7 @@ internal class GameViewController: UIViewController {
     
     private func showGameOver(){
         if let resultController = storyboard!.instantiateViewController(withIdentifier: "GameOver") as? GameOverViewController{
+            resultController.score = game.getScore()
             present(resultController, animated: true, completion: nil)
         }
     }

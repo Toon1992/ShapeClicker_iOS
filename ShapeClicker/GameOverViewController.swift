@@ -11,9 +11,17 @@ import UIKit
 internal class GameOverViewController : UIViewController{
     
     //properties
+    var score = 0
+    
+    @IBOutlet weak var lblTotalScore: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setLabels()
+    }
+    
+    private func setLabels(){
+        lblTotalScore.text = String(score)
     }
     
 //    private func setView(){
