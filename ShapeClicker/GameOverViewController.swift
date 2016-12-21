@@ -11,9 +11,11 @@ import UIKit
 internal class GameOverViewController : UIViewController{
     
     //properties
-    var score = 0
+    private var score = 0
+    private var player : Player = Player()
     
     @IBOutlet weak var lblTotalScore: UILabel!
+    @IBOutlet weak var lblPlayerName: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,15 @@ internal class GameOverViewController : UIViewController{
     
     private func setLabels(){
         lblTotalScore.text = String(score)
+        lblPlayerName.text = player.playerName
+    }
+    
+    public func setScore(score: Int){
+        self.score = score
+    }
+    
+    public func setPlayer(player: Player){
+        self.player = player
     }
     
 //    private func setView(){

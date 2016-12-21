@@ -27,6 +27,11 @@ internal class GameViewController: UIViewController {
     private var timeInterval = 0.0
     private let maxAddTime = 50
     private var addTime = 0
+    private var player : Player = Player()
+    
+    public func setPlayer(player: Player){
+        self.player = player
+    }
     
     
     override func viewDidLoad() {
@@ -77,7 +82,8 @@ internal class GameViewController: UIViewController {
     
     private func showGameOver(){
         if let resultController = storyboard!.instantiateViewController(withIdentifier: "GameOver") as? GameOverViewController{
-            resultController.score = game.getScore()
+            resultController.setScore(score: game.getScore())
+            resultController.setPlayer(player: player)
             present(resultController, animated: true, completion: nil)
         }
     }

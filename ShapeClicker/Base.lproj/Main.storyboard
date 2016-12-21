@@ -30,7 +30,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="Start Game"/>
                                         <connections>
-                                            <segue destination="R11-Zd-eK5" kind="presentation" id="i7q-fd-FLr"/>
+                                            <segue destination="YHI-cY-BmQ" kind="presentation" id="J1J-iU-sHr"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbI-2Q-Czb">
@@ -67,10 +67,79 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
+        <!--Create Player View Controller-->
+        <scene sceneID="VtT-sB-v6g">
+            <objects>
+                <viewController id="YHI-cY-BmQ" customClass="CreatePlayerViewController" customModule="ShapeClicker" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7v6-3B-G91"/>
+                        <viewControllerLayoutGuide type="bottom" id="EKw-TA-sJb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cgv-Do-Esc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JP5-ig-ufI">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="-6" translatesAutoresizingMaskIntoConstraints="NO" id="vbe-Tq-fd4">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter player name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUt-4D-BVb">
+                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="____________________________________" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZoU-f5-tOV">
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="LUt-4D-BVb" secondAttribute="bottom" constant="14" id="7zv-4H-tu5"/>
+                                            <constraint firstItem="LUt-4D-BVb" firstAttribute="leading" secondItem="vbe-Tq-fd4" secondAttribute="leading" constant="35" id="ZOJ-fi-4GV"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZoU-f5-tOV" secondAttribute="trailing" id="cjk-nX-WhP"/>
+                                        </constraints>
+                                    </stackView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i5Y-sF-C8T">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="QpV-aL-ouS"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ct-mr-nY7">
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="Play game"/>
+                                        <connections>
+                                            <action selector="CreatePlayer:" destination="YHI-cY-BmQ" eventType="touchUpInside" id="Qef-jn-5Du"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="vbe-Tq-fd4" firstAttribute="leading" secondItem="JP5-ig-ufI" secondAttribute="leading" id="Twc-oC-dBl"/>
+                                    <constraint firstItem="i5Y-sF-C8T" firstAttribute="leading" secondItem="JP5-ig-ufI" secondAttribute="leading" constant="31" id="ru9-gj-yH3"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JP5-ig-ufI" firstAttribute="top" secondItem="7v6-3B-G91" secondAttribute="bottom" constant="200" id="2Dh-7P-sLV"/>
+                            <constraint firstItem="JP5-ig-ufI" firstAttribute="centerX" secondItem="cgv-Do-Esc" secondAttribute="centerX" id="fq2-pQ-phU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txfPlayerName" destination="i5Y-sF-C8T" id="g6S-r4-e4S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wgK-18-Gdc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.79999999999995" y="138.98050974512745"/>
+        </scene>
         <!--Game View Controller-->
         <scene sceneID="l4u-i4-3FV">
             <objects>
-                <viewController id="R11-Zd-eK5" customClass="GameViewController" customModule="ShapeClicker" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Game" id="R11-Zd-eK5" customClass="GameViewController" customModule="ShapeClicker" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fhi-FE-wB4"/>
                         <viewControllerLayoutGuide type="bottom" id="eIF-wR-eeM"/>
@@ -136,7 +205,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUh-Ng-8yd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="941.60000000000002" y="137.18140929535232"/>
+            <point key="canvasLocation" x="906" y="895"/>
         </scene>
         <!--Game Over View Controller-->
         <scene sceneID="lOu-P7-P7N">
@@ -233,12 +302,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lblPlayerName" destination="TCC-rZ-wPa" id="eqo-vn-L8b"/>
                         <outlet property="lblTotalScore" destination="D1G-WO-qiu" id="0sb-tm-FoT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9M4-6w-iSe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1701.5999999999999" y="131.78410794602701"/>
+            <point key="canvasLocation" x="1698" y="895"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Gkg-fy-lzw">
@@ -259,7 +329,4 @@
             <point key="canvasLocation" x="137" y="895"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="BaZ-LK-LzX"/>
-    </inferredMetricsTieBreakers>
 </document>
