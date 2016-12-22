@@ -20,6 +20,8 @@
 		8C251F2B1E093198000594D3 /* ShapeClickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C251F2A1E093198000594D3 /* ShapeClickerUITests.swift */; };
 		8C251F3A1E093EDD000594D3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C251F391E093EDD000594D3 /* GameViewController.swift */; };
 		8C419BC21E0AB6F30055C655 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C419BC11E0AB6F30055C655 /* GameOverViewController.swift */; };
+		8C623E161E0C00B600A85A4D /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C623E151E0C00B600A85A4D /* TutorialPageViewController.swift */; };
+		8C623E181E0C0C7E00A85A4D /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C623E171E0C0C7E00A85A4D /* TutorialViewController.swift */; };
 		8CF16E4F1E0AE12400454846 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF16E4E1E0AE12400454846 /* Player.swift */; };
 		8CF16E511E0AE40500454846 /* CreatePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF16E501E0AE40500454846 /* CreatePlayerViewController.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +63,8 @@
 		8C251F2C1E093198000594D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C251F391E093EDD000594D3 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		8C419BC11E0AB6F30055C655 /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
+		8C623E151E0C00B600A85A4D /* TutorialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
+		8C623E171E0C0C7E00A85A4D /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		8CF16E4E1E0AE12400454846 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		8CF16E501E0AE40500454846 /* CreatePlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePlayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,6 +165,8 @@
 				8C251F391E093EDD000594D3 /* GameViewController.swift */,
 				8C419BC11E0AB6F30055C655 /* GameOverViewController.swift */,
 				8CF16E501E0AE40500454846 /* CreatePlayerViewController.swift */,
+				8C623E151E0C00B600A85A4D /* TutorialPageViewController.swift */,
+				8C623E171E0C0C7E00A85A4D /* TutorialViewController.swift */,
 			);
 			name = UIControllers;
 			sourceTree = "<group>";
@@ -306,8 +312,10 @@
 				8C251F0D1E093197000594D3 /* StartGameViewController.swift in Sources */,
 				8C1371E51E096C2C00CBED9D /* Color.swift in Sources */,
 				8C251F3A1E093EDD000594D3 /* GameViewController.swift in Sources */,
+				8C623E161E0C00B600A85A4D /* TutorialPageViewController.swift in Sources */,
 				8C251F0B1E093197000594D3 /* AppDelegate.swift in Sources */,
 				8CF16E4F1E0AE12400454846 /* Player.swift in Sources */,
+				8C623E181E0C0C7E00A85A4D /* TutorialViewController.swift in Sources */,
 				8C419BC21E0AB6F30055C655 /* GameOverViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
