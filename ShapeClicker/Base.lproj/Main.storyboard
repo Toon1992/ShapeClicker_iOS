@@ -20,24 +20,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome! " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2XI-F6-GeD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Welcome! " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2XI-F6-GeD">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="109" id="V7J-TL-x73"/>
+                                    <constraint firstAttribute="height" constant="109" id="f5h-z6-fay"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONw-Z1-ceZ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="281" id="yCc-Id-FZ2"/>
+                                </constraints>
                                 <string key="text">Hi, my name is Toon De True and this is my game app Shapeclicker. I made this in Xcode 8 with swift 3. I had to make an iOS application for the course Native Apps II: mobile apps for iOS. Here you will find the result.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On the next page, you will find the how to play for this game" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWf-Eh-hwL">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="77" id="Afi-wa-4XN"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -45,19 +45,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="SWf-Eh-hwL" firstAttribute="leading" secondItem="Iuh-Li-bzB" secondAttribute="leadingMargin" id="1xl-p6-zyv"/>
-                            <constraint firstItem="2XI-F6-GeD" firstAttribute="top" secondItem="Iuh-Li-bzB" secondAttribute="topMargin" constant="13" id="DUi-wG-NC4"/>
-                            <constraint firstItem="2XI-F6-GeD" firstAttribute="centerX" secondItem="Iuh-Li-bzB" secondAttribute="centerX" id="HD8-f9-H94"/>
-                            <constraint firstItem="SWf-Eh-hwL" firstAttribute="leading" secondItem="ONw-Z1-ceZ" secondAttribute="leading" id="NAx-um-6Dq"/>
-                            <constraint firstItem="SWf-Eh-hwL" firstAttribute="trailing" secondItem="ONw-Z1-ceZ" secondAttribute="trailing" id="bQI-ak-PVb"/>
-                            <constraint firstItem="ONw-Z1-ceZ" firstAttribute="top" secondItem="Fuc-97-jd2" secondAttribute="bottom" constant="24" id="eMo-uz-Nfa"/>
-                            <constraint firstItem="SWf-Eh-hwL" firstAttribute="top" secondItem="2XI-F6-GeD" secondAttribute="bottom" constant="200" id="i9P-Xr-vJV"/>
-                            <constraint firstItem="2XI-F6-GeD" firstAttribute="leading" secondItem="Iuh-Li-bzB" secondAttribute="leadingMargin" constant="54" id="icb-Na-Qb3"/>
-                            <constraint firstItem="SWf-Eh-hwL" firstAttribute="trailing" secondItem="Iuh-Li-bzB" secondAttribute="trailingMargin" id="qJr-XF-lE9"/>
-                            <constraint firstItem="FEr-bo-SZ7" firstAttribute="top" secondItem="SWf-Eh-hwL" secondAttribute="bottom" constant="268" id="r68-D1-tcP"/>
-                            <constraint firstItem="ONw-Z1-ceZ" firstAttribute="centerX" secondItem="Iuh-Li-bzB" secondAttribute="centerX" id="t96-hj-ezA"/>
-                            <constraint firstItem="FEr-bo-SZ7" firstAttribute="top" secondItem="SWf-Eh-hwL" secondAttribute="bottom" constant="268" id="vcy-1g-KsV"/>
-                            <constraint firstItem="FEr-bo-SZ7" firstAttribute="top" secondItem="ONw-Z1-ceZ" secondAttribute="bottom" constant="342" id="yB0-0c-gmL"/>
+                            <constraint firstItem="SWf-Eh-hwL" firstAttribute="trailing" secondItem="Iuh-Li-bzB" secondAttribute="trailingMargin" id="3gd-aY-2XY"/>
+                            <constraint firstItem="ONw-Z1-ceZ" firstAttribute="trailing" secondItem="Iuh-Li-bzB" secondAttribute="trailingMargin" id="6l5-2K-CWy"/>
+                            <constraint firstItem="FEr-bo-SZ7" firstAttribute="top" secondItem="SWf-Eh-hwL" secondAttribute="bottom" constant="268" id="7tQ-LP-pta"/>
+                            <constraint firstItem="2XI-F6-GeD" firstAttribute="leading" secondItem="Iuh-Li-bzB" secondAttribute="leadingMargin" constant="54" id="BwI-9X-M8v"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2XI-F6-GeD" secondAttribute="trailing" constant="55" id="I2o-d7-JXN"/>
+                            <constraint firstItem="SWf-Eh-hwL" firstAttribute="leading" secondItem="Iuh-Li-bzB" secondAttribute="leadingMargin" id="JGl-yo-rd3"/>
+                            <constraint firstItem="ONw-Z1-ceZ" firstAttribute="top" secondItem="Fuc-97-jd2" secondAttribute="bottom" constant="24" id="Ma4-FJ-x4O"/>
+                            <constraint firstItem="ONw-Z1-ceZ" firstAttribute="leading" secondItem="Iuh-Li-bzB" secondAttribute="leadingMargin" id="j9k-Fz-bVX"/>
+                            <constraint firstItem="2XI-F6-GeD" firstAttribute="top" secondItem="Iuh-Li-bzB" secondAttribute="topMargin" constant="13" id="rGU-f9-omz"/>
+                            <constraint firstItem="SWf-Eh-hwL" firstAttribute="top" secondItem="2XI-F6-GeD" secondAttribute="bottom" constant="200" id="s9r-tt-tig"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -296,7 +293,7 @@
                                             <constraint firstAttribute="height" constant="30" id="JY5-qD-qUf"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="HighScore"/>
+                                        <state key="normal" title="Highscore"/>
                                         <connections>
                                             <segue destination="vVK-He-Bt6" kind="presentation" id="E7T-vD-Xx0"/>
                                         </connections>
@@ -306,7 +303,7 @@
                                             <constraint firstAttribute="height" constant="30" id="kSu-gB-CW3"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="How to play"/>
+                                        <state key="normal" title="How To Play"/>
                                         <connections>
                                             <segue destination="k8o-Lo-bky" kind="presentation" id="ozz-3i-PsM"/>
                                         </connections>
