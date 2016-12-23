@@ -10,4 +10,5 @@ import Foundation
 
 struct Player {
     var playerName : String?
+    var score : Int?
 }
