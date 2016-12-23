@@ -5,6 +5,8 @@
 //  Created by Toon De True on 22/12/2016.
 //  Copyright © 2016 Toon De True. All rights reserved.
 //
+// Source: https://www.youtube.com/watch?v=oX9o-DnMHsE
+// Natuurlijk aangepasst naar mijn noden
 
 import UIKit
 
