@@ -378,11 +378,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShapeClicker/HighscoreViewController.swift"
-            timestampString = "504182018.390371"
+            timestampString = "504199755.126212"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "HighscoreViewController"
             landmarkType = "3">
             <Locations>

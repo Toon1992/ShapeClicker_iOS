@@ -8,17 +8,14 @@ target 'ShapeClicker' do
   # Pods for ShapeClicker
     pod 'SwiftyJSON', '~> 3.1'
 
-  target 'ShapeClickerTests' do
-    inherit! :search_paths
+  #target 'ShapeClickerTests' do
+    #inherit! :search_paths
     # Pods for testing
-  end
+  #end
 
-  target 'ShapeClickerUITests' do
-    inherit! :search_paths
+  #target 'ShapeClickerUITests' do
+    #inherit! :search_paths
     # Pods for testing
-  end
-
-
-
+  #end
 
 end

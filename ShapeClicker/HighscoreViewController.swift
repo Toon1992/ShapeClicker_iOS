@@ -21,14 +21,15 @@ class HighscoreViewController : UIViewController, UITableViewDataSource, UITable
     
     //Properties
     @IBOutlet weak var highscoreTableView: UITableView!
-    
-    let players = ["Toon","Hannes"]
-    let score = ["1000","1200"]
     let textcellIdentifier = "TableCell"
+    var highScoresArr = [Player]()
+    
+    var highScore : HighScore = HighScore.instance
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        highScoresArr = highScore.getHighScores()
         highscoreTableView.delegate = self
         highscoreTableView.dataSource = self
         
@@ -37,15 +38,15 @@ class HighscoreViewController : UIViewController, UITableViewDataSource, UITable
     
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-       return players.count
+       return highScoresArr.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = highscoreTableView.dequeueReusableCell(withIdentifier: textcellIdentifier) as! HighScoreTableViewCell
         
         let row = indexPath.row
-        cell.lblPlayerName.text = players[row]
-        cell.lblScore.text = score[row]
+        cell.lblPlayerName.text = highScoresArr[row].playerName
+        cell.lblScore.text = highScoresArr[row].score
         
         return cell
     }

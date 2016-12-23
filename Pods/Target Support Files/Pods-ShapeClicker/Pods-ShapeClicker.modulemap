@@ -1,0 +1,6 @@
+framework module Pods_ShapeClicker {
+  umbrella header "Pods-ShapeClicker-umbrella.h"
+
+  export *
+  module * { export * }
+}
