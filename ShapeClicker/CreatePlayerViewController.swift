@@ -30,7 +30,7 @@ internal class CreatePlayerViewController : UIViewController{
     }
     
     private func startGame(player: Player){
-        if let resultController = storyboard!.instantiateViewController(withIdentifier: "Game") as? GameViewController{
+        if let resultController = storyboard!.instantiateViewController(withIdentifier: "chooseGame") as? ChooseViewController{
             resultController.setPlayer(player: player)
             present(resultController, animated: true, completion: nil)
         }

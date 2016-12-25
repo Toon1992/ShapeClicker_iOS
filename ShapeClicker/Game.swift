@@ -31,7 +31,9 @@ class Game{
             viewShapes = [ColorShape]()
         }
         
-        for _ in 0...MAX_SHAPES{
+        viewShapes.append(findShape)
+        
+        for _ in 1...MAX_SHAPES{
             viewShapes.append(generateShape())
         }
     }
@@ -77,5 +79,32 @@ class Game{
     public func addScore(shape: ColorShape){
         score += shape.score
     }
+    
+    public func getShapeString()->String{
+        switch findShape.shape {
+        case Shape.cirkel:
+            return "Cirkel"
+        case Shape.rectangle:
+            return "Rectangle"
+        case Shape.triangle:
+            return "Triangle"
+        }
+    }
+    
+    public func getColorString()-> String{
+        switch findShape.color {
+        case Color.blue:
+           return "Red"
+        case Color.red:
+            return "Purple"
+        case Color.green:
+            return "Blue"
+        case Color.yellow:
+            return "Green"
+        case Color.purple:
+            return "Yellow"
+        }
+    }
+
     
 }

@@ -29,9 +29,14 @@ internal class GameViewController: UIViewController{
     private let maxAddTime = 50
     private var addTime = 0
     private var player : Player = Player()
+    private var isShapeGame: Bool = true
     
     public func setPlayer(player: Player){
         self.player = player
+    }
+    
+    public func setGame(isShape: Bool){
+        self.isShapeGame = isShape
     }
     
     
@@ -107,17 +112,12 @@ internal class GameViewController: UIViewController{
     }
     
     private func setLabelText(colorShape: ColorShape){
-        switch colorShape.shape {
-        case Shape.cirkel:
-            lblFindElement.text = "Cirkel"
-            break
-        case Shape.rectangle:
-            lblFindElement.text = "Rectangle"
-            break
-        case Shape.triangle:
-            lblFindElement.text = "Triangle"
-            break
+        if isShapeGame{
+           lblFindElement.text = game.getShapeString()
+        } else {
+            lblFindElement.text = game.getColorString()
         }
+       
     }
     
     private func setLabelColor(colorShape: ColorShape){
