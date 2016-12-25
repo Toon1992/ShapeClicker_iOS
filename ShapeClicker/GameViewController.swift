@@ -8,13 +8,14 @@
 
 import UIKit
 
-internal class GameViewController: UIViewController {
+internal class GameViewController: UIViewController{
     
     //Properties
     @IBOutlet weak var lblFindElement: UILabel!
+    @IBOutlet weak var stDown: UIStackView!
+    @IBOutlet weak var stUp: UIStackView!
     @IBOutlet weak var progressTimer: UIProgressView!
-    @IBOutlet weak var stvUp: UIStackView!
-    @IBOutlet weak var stvDown: UIStackView!
+    
     @IBOutlet weak var lblScore: UILabel!
     
     private var game = Game()
@@ -36,7 +37,9 @@ internal class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         initialize()
+        
     }
     
     private func initialize(){
@@ -44,6 +47,7 @@ internal class GameViewController: UIViewController {
         addTime = maxAddTime
         
         viewShapes = game.getViewShapes()
+        
         setLabel()
         fillStacks()
         setProgressView()
@@ -137,8 +141,8 @@ internal class GameViewController: UIViewController {
     }
     
     private func fillStacks(){
-        var flag = true
         var index = 0
+        var flag = true
         
         for shape in viewShapes{
             let image : UIImage = UIImage(named: shape.name)!
@@ -156,10 +160,10 @@ internal class GameViewController: UIViewController {
                 flag = false
             }
             
-            if flag {
-                stvUp.addArrangedSubview(imagev)
+            if flag{
+                stUp.addArrangedSubview(imagev)
             } else {
-                stvDown.addArrangedSubview(imagev)
+                stDown.addArrangedSubview(imagev)
             }
             
             index += 1
@@ -183,19 +187,18 @@ internal class GameViewController: UIViewController {
        reset()
     }
     
-    private func removeViewsFromStack(stack: UIStackView ){
-        for view in stack.subviews{
-            view.removeFromSuperview()
-        }
-        
-    }
-    
     private func reset(){
-        removeViewsFromStack(stack: stvUp)
-        removeViewsFromStack(stack: stvDown)
         viewShapes = game.getViewShapes()
+        reload(stv: stUp)
+        reload(stv: stDown)
         setLabel()
         fillStacks()
+    }
+    
+    private func reload(stv: UIStackView){
+        for view in stv.subviews{
+            view.removeFromSuperview()
+        }
     }
     
     

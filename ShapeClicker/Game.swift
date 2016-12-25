@@ -9,7 +9,7 @@
 import Foundation
 
 class Game{
-    private let MAX_SHAPES = 6
+    private let MAX_SHAPES = 5
     private var viewShapes : [ColorShape]
     private var findShape : ColorShape
     private var score = 0

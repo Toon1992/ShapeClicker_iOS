@@ -21,9 +21,9 @@
 		8C251F3A1E093EDD000594D3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C251F391E093EDD000594D3 /* GameViewController.swift */; };
 		8C419BC21E0AB6F30055C655 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C419BC11E0AB6F30055C655 /* GameOverViewController.swift */; };
 		8C5B70641E0D2EBA00B3DB36 /* HighscoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5B70631E0D2EBA00B3DB36 /* HighscoreViewController.swift */; };
-		8C5B706A1E0D3E1E00B3DB36 /* HighScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5B70691E0D3E1E00B3DB36 /* HighScore.swift */; };
-		8C5B706F1E0D70FE00B3DB36 /* HighScores.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C5B706E1E0D70FE00B3DB36 /* HighScores.json */; };
 		8C623E1A1E0C219700A85A4D /* HowToPlayPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C623E191E0C219700A85A4D /* HowToPlayPageViewController.swift */; };
+		8C8247761E0E8A4E00B0B09C /* HighScores.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C8247751E0E8A4E00B0B09C /* HighScores.json */; };
+		8C9511801E0EA445007C61C2 /* HighScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C95117F1E0EA445007C61C2 /* HighScore.swift */; };
 		8CF16E4F1E0AE12400454846 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF16E4E1E0AE12400454846 /* Player.swift */; };
 		8CF16E511E0AE40500454846 /* CreatePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF16E501E0AE40500454846 /* CreatePlayerViewController.swift */; };
 		9DA27EA3519C1BCE797EB118 /* Pods_ShapeClicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F05F87423F0EC53D6D1660 /* Pods_ShapeClicker.framework */; };
@@ -68,9 +68,9 @@
 		8C251F391E093EDD000594D3 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		8C419BC11E0AB6F30055C655 /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		8C5B70631E0D2EBA00B3DB36 /* HighscoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighscoreViewController.swift; sourceTree = "<group>"; };
-		8C5B70691E0D3E1E00B3DB36 /* HighScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScore.swift; sourceTree = "<group>"; };
-		8C5B706E1E0D70FE00B3DB36 /* HighScores.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = HighScores.json; path = ../../../../HighScores.json; sourceTree = "<group>"; };
 		8C623E191E0C219700A85A4D /* HowToPlayPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToPlayPageViewController.swift; sourceTree = "<group>"; };
+		8C8247751E0E8A4E00B0B09C /* HighScores.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HighScores.json; sourceTree = "<group>"; };
+		8C95117F1E0EA445007C61C2 /* HighScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScore.swift; sourceTree = "<group>"; };
 		8CF16E4E1E0AE12400454846 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		8CF16E501E0AE40500454846 /* CreatePlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePlayerViewController.swift; sourceTree = "<group>"; };
 		D27EFE47175EB3EFA4DC9D83 /* Pods-ShapeClicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShapeClicker.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShapeClicker/Pods-ShapeClicker.release.xcconfig"; sourceTree = "<group>"; };
@@ -195,7 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				8C1371EA1E096F6E00CBED9D /* Game.swift */,
-				8C5B70691E0D3E1E00B3DB36 /* HighScore.swift */,
+				8C95117F1E0EA445007C61C2 /* HighScore.swift */,
 			);
 			name = Domein;
 			path = ..;
@@ -204,7 +204,7 @@
 		8C5B706D1E0D70E900B3DB36 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8C5B706E1E0D70FE00B3DB36 /* HighScores.json */,
+				8C8247751E0E8A4E00B0B09C /* HighScores.json */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -330,7 +330,7 @@
 			files = (
 				8C251F151E093197000594D3 /* LaunchScreen.storyboard in Resources */,
 				8C251F121E093197000594D3 /* Assets.xcassets in Resources */,
-				8C5B706F1E0D70FE00B3DB36 /* HighScores.json in Resources */,
+				8C8247761E0E8A4E00B0B09C /* HighScores.json in Resources */,
 				8C141D421E0AC69600FA0388 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,12 +407,12 @@
 				8C1371E71E096C4100CBED9D /* Shape.swift in Sources */,
 				8C1371E91E096D7900CBED9D /* ColorShape.swift in Sources */,
 				8CF16E511E0AE40500454846 /* CreatePlayerViewController.swift in Sources */,
+				8C9511801E0EA445007C61C2 /* HighScore.swift in Sources */,
 				8C5B70641E0D2EBA00B3DB36 /* HighscoreViewController.swift in Sources */,
 				8C1371EB1E096F6E00CBED9D /* Game.swift in Sources */,
 				8C251F0D1E093197000594D3 /* StartGameViewController.swift in Sources */,
 				8C623E1A1E0C219700A85A4D /* HowToPlayPageViewController.swift in Sources */,
 				8C1371E51E096C2C00CBED9D /* Color.swift in Sources */,
-				8C5B706A1E0D3E1E00B3DB36 /* HighScore.swift in Sources */,
 				8C251F3A1E093EDD000594D3 /* GameViewController.swift in Sources */,
 				8C251F0B1E093197000594D3 /* AppDelegate.swift in Sources */,
 				8CF16E4F1E0AE12400454846 /* Player.swift in Sources */,

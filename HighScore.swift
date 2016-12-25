@@ -1,8 +1,4 @@
-//
-//  HighScore.swift
-//  ShapeClicker
-//
-//  Created by Toon De True on 23/12/2016.
+// Created by Toon De True on 23/12/2016.
 //  Copyright © 2016 Toon De True. All rights reserved.
 //
 
@@ -46,7 +42,7 @@ class HighScore{
         for item in (jsonObj?["HighScore"].arrayValue)!{
             let playerName = item["playerName"].stringValue
             let score = item["score"].stringValue
-            highscores?.append(Player(playerName: playerName, score: score))
+            highscores?.append(Player(playerName: playerName, score: Int(score)))
         }
     }
     
@@ -57,4 +53,28 @@ class HighScore{
     public func addHighScore(highscore: Player){
         highscores?.append(highscore)
     }
+    
+    public func checkHighScore(){
+        highscores?.sort{
+            $0.score! > $1.score!
+        }
+       
+        highscores?.remove(at: (highscores?.count)! - 1)
+        print(highscores?.count)
+        
+        writeToJsonfile()
+    }
+    
+    private func writeToJsonfile(){
+        //"/Users/toondetrue/Desktop/HighScores.json"
+        jsonObj?["HighScore"] = JSON(highscores)
+        let str = jsonObj?.description
+        let newData = str?.data(using: String.Encoding.utf8)!
+        let path = "/Users/toondetrue/Desktop/IOS App/iOSProject/ShapeClicker/ShapeClicker/HighScore.swift"
+        if let file = FileHandle(forWritingAtPath: path){
+               file.write(newData!)
+
+       }
+        
+   }
 }

@@ -13,6 +13,7 @@ internal class GameOverViewController : UIViewController{
     //properties
     private var score = 0
     private var player : Player = Player()
+    private var highscores: HighScore = HighScore.instance
     
     @IBOutlet weak var lblTotalScore: UILabel!
     @IBOutlet weak var lblPlayerName: UILabel!
@@ -20,6 +21,15 @@ internal class GameOverViewController : UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         setLabels()
+      
+        checkHighScore()
+        
+    }
+    
+    private func checkHighScore(){
+       player.score = score
+       highscores.addHighScore(highscore: player)
+        highscores.checkHighScore()
     }
     
     private func setLabels(){
@@ -34,17 +44,5 @@ internal class GameOverViewController : UIViewController{
     public func setPlayer(player: Player){
         self.player = player
     }
-    
-//    private func setView(){
-//        self.vPopup.backgroundColor = UIColor.black.withAlphaComponent(0.6)
-//        self.vPopup.layer.cornerRadius = 5
-//        self.vPopup.layer.shadowOpacity = 0.8
-//        self.vPopup.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-//    }
-//    
-//    public func showView(aView: UIView! ){
-//        aView.addSubview(self.vPopup)
-//    }
-//    
     
 }

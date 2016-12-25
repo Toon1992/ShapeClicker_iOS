@@ -46,7 +46,10 @@ class HighscoreViewController : UIViewController, UITableViewDataSource, UITable
         
         let row = indexPath.row
         cell.lblPlayerName.text = highScoresArr[row].playerName
-        cell.lblScore.text = highScoresArr[row].score
+        
+        if let s = highScoresArr[row].score{
+            cell.lblScore.text = String(s)
+        }
         
         return cell
     }
