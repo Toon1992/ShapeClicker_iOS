@@ -24,6 +24,7 @@
 		8C5B70641E0D2EBA00B3DB36 /* HighscoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5B70631E0D2EBA00B3DB36 /* HighscoreViewController.swift */; };
 		8C623E1A1E0C219700A85A4D /* HowToPlayPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C623E191E0C219700A85A4D /* HowToPlayPageViewController.swift */; };
 		8C8247761E0E8A4E00B0B09C /* HighScores.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C8247751E0E8A4E00B0B09C /* HighScores.json */; };
+		8C9179DF1E1D542700123F07 /* BackgroundUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9179DE1E1D542700123F07 /* BackgroundUIView.swift */; };
 		8C9511801E0EA445007C61C2 /* HighScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C95117F1E0EA445007C61C2 /* HighScore.swift */; };
 		8CF16E4F1E0AE12400454846 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF16E4E1E0AE12400454846 /* Player.swift */; };
 		8CF16E511E0AE40500454846 /* CreatePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF16E501E0AE40500454846 /* CreatePlayerViewController.swift */; };
@@ -72,6 +73,7 @@
 		8C5B70631E0D2EBA00B3DB36 /* HighscoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighscoreViewController.swift; sourceTree = "<group>"; };
 		8C623E191E0C219700A85A4D /* HowToPlayPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToPlayPageViewController.swift; sourceTree = "<group>"; };
 		8C8247751E0E8A4E00B0B09C /* HighScores.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HighScores.json; sourceTree = "<group>"; };
+		8C9179DE1E1D542700123F07 /* BackgroundUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundUIView.swift; sourceTree = "<group>"; };
 		8C95117F1E0EA445007C61C2 /* HighScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScore.swift; sourceTree = "<group>"; };
 		8CF16E4E1E0AE12400454846 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		8CF16E501E0AE40500454846 /* CreatePlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePlayerViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		8C251F091E093197000594D3 /* ShapeClicker */ = {
 			isa = PBXGroup;
 			children = (
+				8C9179DD1E1D540D00123F07 /* UIUtils */,
 				8C5B706D1E0D70E900B3DB36 /* Resources */,
 				8C5B70681E0D3DD900B3DB36 /* Domein */,
 				8C1371E31E096BE500CBED9D /* Models */,
@@ -210,6 +213,14 @@
 				8C8247751E0E8A4E00B0B09C /* HighScores.json */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		8C9179DD1E1D540D00123F07 /* UIUtils */ = {
+			isa = PBXGroup;
+			children = (
+				8C9179DE1E1D542700123F07 /* BackgroundUIView.swift */,
+			);
+			name = UIUtils;
 			sourceTree = "<group>";
 		};
 		AD418900518F79023D650252 /* Pods */ = {
@@ -415,6 +426,7 @@
 				8C5138A91E10265B006BD7E9 /* ChooseViewController.swift in Sources */,
 				8C1371EB1E096F6E00CBED9D /* Game.swift in Sources */,
 				8C251F0D1E093197000594D3 /* StartGameViewController.swift in Sources */,
+				8C9179DF1E1D542700123F07 /* BackgroundUIView.swift in Sources */,
 				8C623E1A1E0C219700A85A4D /* HowToPlayPageViewController.swift in Sources */,
 				8C1371E51E096C2C00CBED9D /* Color.swift in Sources */,
 				8C251F3A1E093EDD000594D3 /* GameViewController.swift in Sources */,
