@@ -13,7 +13,7 @@ import UIKit
 class HowToPlayPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate{
     
     lazy var VCArr : [UIViewController] = {
-        return [self.newPageController(controller: "Page1ViewController"), self.newPageController(controller: "Page2ViewController"), self.newPageController(controller: "Page3ViewController")]
+        return [self.newPageController(controller: "Page1ViewController"), self.newPageController(controller: "Page2ViewController"), self.newPageController(controller: "Page3ViewController"), self.newPageController(controller: "Page4ViewController")]
     }()
     
     private func newPageController(controller: String) -> UIViewController{

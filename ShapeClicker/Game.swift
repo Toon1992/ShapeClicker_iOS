@@ -111,23 +111,54 @@ class Game{
     
     public func getColorString()-> String{
         let number = arc4random_uniform(5)
+        var randomColorString:String
+        var findColorString:String
         
         switch number {
         case 0:
-            return "Red"
+            randomColorString = "Red"
+            break
         case 1:
-            return "Purple"
+            randomColorString = "Purple"
+            break
         case 2:
-            return "Blue"
+            randomColorString = "Blue"
+            break
         case 3:
-            return "Green"
+            randomColorString = "Green"
+            break
         case 4:
-            return "Yellow"
+            randomColorString = "Yellow"
+            break
         default:
-            return "Orange"
+            randomColorString = "Orange"
         }
         
+        switch findShape.color {
+        case Color.blue:
+            findColorString = "Blue"
+            break
+        case Color.green:
+            findColorString = "Green"
+            break
+        case Color.purple:
+            findColorString = "Purple"
+            break
+        case Color.red:
+            findColorString = "Red"
+            break
+        case Color.yellow:
+            findColorString = "Yellow"
+            break
+        }
+        
+        if randomColorString == findColorString{
+            return getColorString()
+        }
+        
+        
+       return randomColorString
     }
-
     
 }
+
