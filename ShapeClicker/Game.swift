@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import GameplayKit
 
 class Game{
     private let MAX_SHAPES = 5
@@ -22,7 +23,7 @@ class Game{
     }
     
     public func setNewShapes(){
-        findShape = generateShape()
+        findShape = generateNewFindShape()
         generateViewingShapes()
     }
     
@@ -36,6 +37,12 @@ class Game{
         for _ in 1...MAX_SHAPES{
             viewShapes.append(generateShape())
         }
+        
+        if !viewShapes.contains(findShape){
+            viewShapes[0] = findShape;
+        }
+        
+        viewShapes = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: viewShapes) as! [ColorShape]
     }
     
     public func generateShape() -> ColorShape{
@@ -66,7 +73,18 @@ class Game{
             isCorrect = true
         }
         
-        findShape = generateNewFindShape()
+        setNewShapes()
+        
+        return isCorrect
+    }
+    
+    public func checkIfCorrectColor(colorShape: ColorShape)->Bool{
+        var isCorrect:Bool = false
+        
+        if(findShape.color == colorShape.color){
+            isCorrect = true
+        }
+        
         setNewShapes()
         
         return isCorrect
@@ -92,18 +110,23 @@ class Game{
     }
     
     public func getColorString()-> String{
-        switch findShape.color {
-        case Color.blue:
-           return "Red"
-        case Color.red:
+        let number = arc4random_uniform(5)
+        
+        switch number {
+        case 0:
+            return "Red"
+        case 1:
             return "Purple"
-        case Color.green:
+        case 2:
             return "Blue"
-        case Color.yellow:
+        case 3:
             return "Green"
-        case Color.purple:
+        case 4:
             return "Yellow"
+        default:
+            return "Orange"
         }
+        
     }
 
     

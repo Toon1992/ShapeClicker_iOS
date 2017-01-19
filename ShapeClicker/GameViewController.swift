@@ -173,8 +173,13 @@ internal class GameViewController: UIViewController{
     func tap(_ sender: UITapGestureRecognizer){
        let tag = sender.view!.tag
        let shape = viewShapes[tag]
+        var isCorrect = false
         
-       let isCorrect = game.checkIfCorrectShape(colorShape: shape)
+        if isShapeGame {
+            isCorrect = game.checkIfCorrectShape(colorShape: shape)
+        } else {
+            isCorrect = game.checkIfCorrectColor(colorShape: shape)
+        }
     
         if isCorrect{
             addSubtractTime(time: addTime * 2)

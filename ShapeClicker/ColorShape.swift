@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ColorShape {
+class ColorShape:Equatable {
     let color : Color
     let shape : Shape
     var name : String
