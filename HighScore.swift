@@ -68,13 +68,23 @@ class HighScore{
     private func writeToJsonfile(){
         //"/Users/toondetrue/Desktop/HighScores.json"
         jsonObj?["HighScore"] = JSON(highscores)
-        let str = jsonObj?.description
-        let newData = str?.data(using: String.Encoding.utf8)!
-        let path = "/Users/toondetrue/Desktop/IOS App/iOSProject/ShapeClicker/ShapeClicker/HighScore.swift"
-        if let file = FileHandle(forWritingAtPath: path){
-               file.write(newData!)
-
-       }
+//        let url = URL(fileURLWithPath: "/Users/toondetrue/Desktop/IOS App/iOSProject/ShapeClicker/ShapeClicker/HighScores.json")
+//        
+//        do{
+//        
+//        } catch {
+//            print(error)
+//        }
+        
+//        if flag {
+//            //        }
+    
+//        let newData = jsonObj?.rawData();
+//        let path = "/Users/toondetrue/Desktop/IOS App/iOSProject/ShapeClicker/ShapeClicker/HighScore.swift"
+//        if let file = FileHandle(forWritingAtPath: path){
+//               file.write(newData!)
+//
+//       }
         
    }
 }

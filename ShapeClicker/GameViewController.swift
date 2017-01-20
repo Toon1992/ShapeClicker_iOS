@@ -22,9 +22,10 @@ internal class GameViewController: UIViewController{
     private var viewShapes = [ColorShape]()
     
     private var timer = Timer()
-    private var poseDuration = 1000
-    private var indexProgressbar = 999
-    private var maxTimeInterval = 0.007
+    private var poseDuration = 500
+    private var indexProgressbar = 0
+    private let maxIndexProgressBar = 499
+    private let maxTimeInterval = 0.007
     private var timeInterval = 0.0
     private let maxAddTime = 50
     private var addTime = 0
@@ -50,6 +51,7 @@ internal class GameViewController: UIViewController{
     private func initialize(){
         timeInterval = maxTimeInterval
         addTime = maxAddTime
+        indexProgressbar = maxIndexProgressBar
         
         viewShapes = game.getViewShapes()
         
@@ -76,6 +78,7 @@ internal class GameViewController: UIViewController{
             timer.invalidate()
         }
         
+        //veranderen van kleur
         if indexProgressbar <= poseDuration/2 && indexProgressbar > 200 {
             progressTimer.progressTintColor = UIColor.yellow
         } else if indexProgressbar <= 200 && indexProgressbar > 0{
@@ -83,6 +86,7 @@ internal class GameViewController: UIViewController{
         } else {
            progressTimer.progressTintColor = UIColor.blue
         }
+        
         
         progressTimer.progress = Float(indexProgressbar) / Float(poseDuration - 1)
         
@@ -99,6 +103,11 @@ internal class GameViewController: UIViewController{
     
     private func addSubtractTime(time: Int){
         indexProgressbar += time
+        
+        if(indexProgressbar >= maxIndexProgressBar){
+            indexProgressbar = maxIndexProgressBar
+        }
+        
     }
     
     private func refreshScoreLabel(){
@@ -189,7 +198,21 @@ internal class GameViewController: UIViewController{
             addSubtractTime(time: addTime * -1)
         }
         
-       reset()
+        versnellenVanTijd()
+        
+        reset()
+    }
+    
+    private func versnellenVanTijd(){
+        //vernellen van de timebar
+        if game.getScore() > 0 && game.getScore()%500 == 0{
+            timeInterval -= 0.0005
+            print(timeInterval)
+            if timeInterval <= 0.001{
+                timeInterval = 0.001
+            }
+            
+        }
     }
     
     private func reset(){

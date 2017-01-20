@@ -18,16 +18,16 @@ internal class CreatePlayerViewController : UIViewController{
         title = "Create"
     }
     
-    
-    @IBAction func CreatePlayer(_ sender: AnyObject) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var player: Player = Player()
-        player.playerName = txfPlayerName.text!
+        let name = txfPlayerName.text!
         
-        if (player.playerName?.isEmpty)!{
+        if name.isEmpty{
             player.playerName = "Guest"
         }
         
-        startGame(player: player)
+        let destinationVC = segue.destination as! ChooseViewController
+        destinationVC.setPlayer(player: player)
     }
     
     private func startGame(player: Player){
