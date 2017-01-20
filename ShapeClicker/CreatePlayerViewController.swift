@@ -15,6 +15,7 @@ internal class CreatePlayerViewController : UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Create"
     }
     
     

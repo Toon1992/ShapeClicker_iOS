@@ -22,6 +22,7 @@ class ChooseViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Choose your game"
        initialize(viewGame: vClickShape)
        initialize(viewGame: vClickColor)
     }

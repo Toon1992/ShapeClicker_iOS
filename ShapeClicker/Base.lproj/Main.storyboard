@@ -546,8 +546,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                 <state key="normal" title="Play game"/>
                                                 <connections>
-                                                    <action selector="CreatePlayer:" destination="YHI-cY-BmQ" eventType="touchUpInside" id="Qef-jn-5Du"/>
-                                                    <segue destination="hbo-e5-apw" kind="presentation" id="dY3-U1-nfP"/>
+                                                    <segue destination="hbo-e5-apw" kind="show" id="4Ax-KC-7go"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -683,16 +682,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxh-6g-ewg">
-                                <frame key="frameInset" minX="164" minY="28" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Yih-r7-ywp" kind="presentation" id="jTV-1D-0py"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.96023426619999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -716,7 +705,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2vK-kf-jQE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1697" y="139"/>
+            <point key="canvasLocation" x="1822" y="139"/>
         </scene>
         <!--Highscore View Controller-->
         <scene sceneID="uAm-eC-A7v">
@@ -760,10 +749,10 @@
                                                 <color key="sectionIndexTrackingBackgroundColor" red="0.0" green="0.96023426619999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TableCell" id="epj-Kk-DFL" customClass="HighScoreTableViewCell" customModule="ShapeClicker" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="28" width="303" height="44"/>
+                                                        <rect key="frame" x="0.0" y="28" width="1000" height="44"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="epj-Kk-DFL" id="tDj-6B-wEW">
-                                                            <frame key="frameInset" width="303" height="43"/>
+                                                            <frame key="frameInset" width="1000" height="44"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzi-Ry-wkX">
@@ -1066,6 +1055,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="lqq-Ne-bSC"/>
-        <segue reference="dY3-U1-nfP"/>
+        <segue reference="4Ax-KC-7go"/>
     </inferredMetricsTieBreakers>
 </document>

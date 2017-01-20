@@ -24,6 +24,7 @@ class HowToPlayPageViewController: UIPageViewController, UIPageViewControllerDat
         super.viewDidLoad()
         self.delegate = self
         self.dataSource = self
+        title = "How to play"
         
         if let firstViewController = VCArr.first{
             setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)

@@ -28,6 +28,7 @@ class HighscoreViewController : UIViewController, UITableViewDataSource, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Highscore"
         
         highScoresArr = highScore.getHighScores()
         highscoreTableView.delegate = self
